@@ -63,11 +63,9 @@ Example: (The tensorflow target image below is over 1GB, if you want to try it w
 ctr image pull nvcr.io/nvidia/tensorflow:18.01-py3
 client/client nvcr.io/nvidia/tensorflow:18.02-py3 10.182.0.5:4000 # Replace this with the IP and port address of the server application 
 ```
-Optionally, you can specify the base image in the client command. If it is not specified, the newest image that is locally available in the client is automatically selected as the base image:
-```bash
-ctr image pull nvcr.io/nvidia/tensorflow:18.01-py3
-client/client nvcr.io/nvidia/tensorflow:18.01-py3 nvcr.io/nvidia/tensorflow:18.02-py3 10.182.0.5:4000 # Replace this with the IP and port address of the server application 
-```
+The newest image that is locally available in the client is automatically selected as the base image
+
+
 Now the client will pull the rsync-based delta from the server machine and apply it to the existing image to produce the updated version.
 
 ## Acknowledgement
