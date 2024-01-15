@@ -2,7 +2,7 @@
 Tool based on Containerd for creating and applying rsync-based delta updates for container images.
 
 ## Installation
-Only dependencies are Containerd and the Go programm
+Only dependencies are Containerd, rsync, and the Go programming language
 
 The following were tested on Ubuntu 22.04 VMs.
 
@@ -23,6 +23,15 @@ export PATH=$PATH:/usr/local/go/bin
 go version
 sudo su
 export PATH=$PATH:/usr/local/go/bin
+```
+
+Installing rsync: 
+
+If rsync is not already installed at your machines, follow the instructions [here](https://download.samba.org/pub/rsync/INSTALL) after downloading the source tar:
+```bash
+wget https://download.samba.org/pub/rsync/src-previews/rsync-3.3.0pre1.tar.gz
+tar xvf rsync-3.3.0pre1.tar.gz
+cd rsync-3.3.0pre1.tar.gz
 ```
 
 ## Usage
